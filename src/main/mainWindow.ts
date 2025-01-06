@@ -490,7 +490,7 @@ function createMainWindow() {
         } catch (error) {
             console.error((error as Error).message);
             await sleep(2000 * iteration); // Slow down if connection fails multiple times
-            await loadDiscord();
+            await loadDiscord(iteration++);
         }
     };
 
